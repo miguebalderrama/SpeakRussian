@@ -252,7 +252,6 @@ body footer .copyRight p {
   }
   body header .menuPrincipal.is_active {
     margin: 10px 0 0 0;
-    background-color: white;
     z-index: 200;
   }
   body header .menuPrincipal.is_active .logo {
@@ -270,7 +269,6 @@ body footer .copyRight p {
     z-index: 100;
     -webkit-transform: translate3d(0px, 0px, 0px);
             transform: translate3d(0px, 0px, 0px);
-    background-color: white;
   }
   body header .menuPrincipal.is_active .menuItems.is_active .left {
     margin: 0;
