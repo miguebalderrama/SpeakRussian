@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+}
+body header {
+  display: block;
+  max-width: 1210px;
+  margin: auto;
+  height: 55px;
+}
+body header .menuPrincipal {
+  display: block;
+  margin: 20px;
+}
+body header .menuPrincipal .hamburger {
+  display: none;
+  background-color: transparent;
+  height: 30px;
+  width: 30px;
+  padding: 10px 0px;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  z-index: 100;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+}
+body header .menuPrincipal .hamburger.is-active {
+  background-color: none;
+  margin-right: 20px;
+}
+body header .menuPrincipal ._layer {
+  background: #515151;
+  margin-bottom: 4px;
+  border-radius: 2px;
+  width: 20px;
+  height: 3px;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+}
+body header .menuPrincipal .hamburger.is-active .-top {
+  transform: translateY(230%) rotate(45deg) !important;
+}
+body header .menuPrincipal .hamburger.is-active .-mid {
+  opacity: 0;
+}
+body header .menuPrincipal .hamburger.is-active .-bottom {
+  transform: translateY(-230%) rotate(135deg) !important;
+}
+body header .menuPrincipal .logo {
+  display: inline-block;
+}
+body header .menuPrincipal .logo img {
+  width: 62px;
+  margin-right: 10px;
+}
+body header .menuPrincipal .menuItems {
+  list-style: none;
+  display: inline-block;
+  width: 90%;
+}
+body header .menuPrincipal .menuItems .left {
+  float: left;
+  margin-right: 30px;
+}
+body header .menuPrincipal .menuItems .rigth {
+  float: right;
+  margin-left: 25px;
+}
+body header .menuPrincipal .menuItems li {
+  display: inline-block;
+}
+body header .menuPrincipal .menuItems li a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  color: #515151;
+  font-weight: 600;
+}
+body main section .hero {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  max-width: 1210px;
+  height: 640px;
+  margin: auto;
+  z-index: 1;
+}
+body main section .hero .overlay {
+  display: flex;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  background: rgba(51, 51, 204, 0.4);
+  /* Black see-through */
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 1;
+  align-items: center;
+  z-index: 1;
+}
+body main section .hero .overlay .phrase p {
+  margin-left: 100px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  line-height: 50px;
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+body main section .hero .overlay .phrase p span {
+  font-weight: 700;
+}
+body main section .hero .overlay .phrase .button {
+  margin-top: 50px;
+  margin-left: 100px;
+  padding-top: 8px;
+  display: block;
+  width: 240px;
+  height: 54px;
+  border: solid 4px white;
+  text-align: center;
+  transition: 0.2s;
+}
+body main section .hero .overlay .phrase .button a {
+  text-decoration: none;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+}
+body main section .hero .overlay .phrase .button:hover {
+  background-color: white;
+  cursor: pointer;
+}
+body main section .hero .overlay .phrase .button:hover a {
+  color: #4e4c4c;
+}
+body main section .hero video {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  filter: grayscale(0.5);
+}
+body footer {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1210px;
+}
+body footer .menuFooter {
+  width: 100%;
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: solid 1px #e0e0e0;
+  display: flex;
+  justify-content: center;
+}
+body footer .menuFooter p {
+  margin: 4px 10px;
+}
+body footer .menuFooter p a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  color: #515151;
+}
+body footer .copyRight {
+  display: flex;
+  justify-content: center;
+}
+body footer .copyRight p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  color: #515151;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+@media (min-width: 320px) and (max-width: 640px) {
+  body header .menuPrincipal.is_active {
+    margin: 20px 0 0 0;
+    background-color: white;
+    z-index: 200;
+  }
+  body header .menuPrincipal.is_active .logo {
+    display: none;
+  }
+  body header .menuPrincipal.is_active .menuItems.is_active {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    z-index: 100;
+  }
+  body header .menuPrincipal.is_active .menuItems.is_active .left {
+    margin: 0;
+  }
+  body header .menuPrincipal.is_active .menuItems.is_active .rigth {
+    margin: 0;
+  }
+  body header .menuPrincipal.is_active .menuItems.is_active li {
+    display: block;
+    z-index: 100;
+    background-color: white;
+  }
+  body header .menuPrincipal.is_active .menuItems.is_active li a {
+    line-height: 52px;
+    padding-left: 10px;
+  }
+  body header .menuPrincipal .hamburger {
+    display: block;
+    float: right;
+  }
+  body header .menuPrincipal .menuItems li {
+    display: block;
+    display: none;
+  }
+  body header .menuPrincipal .menuItems .rigth {
+    float: none;
+  }
+  body header .menuPrincipal .menuItems .left {
+    float: none;
+  }
+  body main section .hero {
+    height: 450px;
+  }
+  body main section .hero .overlay .phrase p {
+    font-size: 30px;
+  }
+  body main section .hero .overlay .phrase .button a {
+    font-size: 30px;
+  }
+  body main section .hero video {
+    height: 100%;
+    width: auto;
+    left: -250px;
+  }
+
+  footer .menuFooter {
+    flex-direction: column;
+    align-items: center;
+  }
+}
