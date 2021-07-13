@@ -4,9 +4,6 @@
   padding: 0;
 }
 
-body {
-  margin: 0;
-}
 body header {
   display: block;
   max-width: 1210px;
@@ -192,8 +189,11 @@ body footer .copyRight p {
 }
 
 @media (min-width: 320px) and (max-width: 640px) {
+  body header {
+    height: 45px;
+  }
   body header .menuPrincipal.is_active {
-    margin: 20px 0 0 0;
+    margin: 10px 0 0 0;
     background-color: white;
     z-index: 200;
   }
@@ -222,9 +222,20 @@ body footer .copyRight p {
     line-height: 52px;
     padding-left: 10px;
   }
+  body header .menuPrincipal {
+    margin: 10px;
+  }
+  body header .menuPrincipal .logo img {
+    width: 52px;
+    margin-top: 5px;
+    margin-right: 10px;
+  }
   body header .menuPrincipal .hamburger {
     display: block;
     float: right;
+  }
+  body header .menuPrincipal .hamburger.is-active {
+    margin-right: 10px;
   }
   body header .menuPrincipal .menuItems li {
     display: block;
@@ -238,6 +249,7 @@ body footer .copyRight p {
   }
   body main section .hero {
     height: 450px;
+    width: 100%;
   }
   body main section .hero .overlay .phrase p {
     font-size: 30px;
