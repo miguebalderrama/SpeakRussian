@@ -203,9 +203,10 @@ body footer .copyRight p {
   body header .menuPrincipal.is_active .menuItems.is_active {
     display: flex;
     flex-direction: column;
-    background-color: white;
     width: 100%;
     z-index: 100;
+    transform: translate3d(0px, 0px, 0px);
+    background-color: white;
   }
   body header .menuPrincipal.is_active .menuItems.is_active .left {
     margin: 0;
@@ -215,20 +216,21 @@ body footer .copyRight p {
   }
   body header .menuPrincipal.is_active .menuItems.is_active li {
     display: block;
-    z-index: 100;
+    z-index: 1000;
     background-color: white;
   }
   body header .menuPrincipal.is_active .menuItems.is_active li a {
     line-height: 52px;
     padding-left: 10px;
+    background-color: white;
+    z-index: 1000;
   }
   body header .menuPrincipal {
-    margin: 10px;
+    margin: 10 10 10 15;
   }
   body header .menuPrincipal .logo img {
     width: 52px;
     margin-top: 5px;
-    margin-right: 10px;
   }
   body header .menuPrincipal .hamburger {
     display: block;
@@ -237,9 +239,13 @@ body footer .copyRight p {
   body header .menuPrincipal .hamburger.is-active {
     margin-right: 10px;
   }
+  body header .menuPrincipal .menuItems {
+    background-color: white;
+    transform: translate3d(0px, -130%, 0px);
+    transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
+  }
   body header .menuPrincipal .menuItems li {
     display: block;
-    display: none;
   }
   body header .menuPrincipal .menuItems .rigth {
     float: none;
@@ -250,17 +256,24 @@ body footer .copyRight p {
   body main section .hero {
     height: 450px;
     width: 100%;
+    z-index: -1;
   }
   body main section .hero .overlay .phrase p {
-    font-size: 30px;
+    margin-left: 50px;
+    font-size: 25px;
+  }
+  body main section .hero .overlay .phrase .button {
+    margin-left: 50px;
+    width: 200px;
+    height: 44px;
   }
   body main section .hero .overlay .phrase .button a {
-    font-size: 30px;
+    font-size: 25px;
   }
   body main section .hero video {
     height: 100%;
     width: auto;
-    left: -250px;
+    left: -220px;
   }
 
   footer .menuFooter {

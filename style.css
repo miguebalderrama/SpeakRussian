@@ -266,9 +266,11 @@ body footer .copyRight p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: white;
     width: 100%;
     z-index: 100;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+            transform: translate3d(0px, 0px, 0px);
+    background-color: white;
   }
   body header .menuPrincipal.is_active .menuItems.is_active .left {
     margin: 0;
@@ -278,12 +280,14 @@ body footer .copyRight p {
   }
   body header .menuPrincipal.is_active .menuItems.is_active li {
     display: block;
-    z-index: 100;
+    z-index: 1000;
     background-color: white;
   }
   body header .menuPrincipal.is_active .menuItems.is_active li a {
     line-height: 52px;
     padding-left: 10px;
+    background-color: white;
+    z-index: 1000;
   }
   body header .menuPrincipal {
     margin: 10 10 10 15;
@@ -299,9 +303,17 @@ body footer .copyRight p {
   body header .menuPrincipal .hamburger.is-active {
     margin-right: 10px;
   }
+  body header .menuPrincipal .menuItems {
+    background-color: white;
+    -webkit-transform: translate3d(0px, -130%, 0px);
+            transform: translate3d(0px, -130%, 0px);
+    -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
+    transition: -webkit-transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
+    transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
+    transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s, -webkit-transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
+  }
   body header .menuPrincipal .menuItems li {
     display: block;
-    display: none;
   }
   body header .menuPrincipal .menuItems .rigth {
     float: none;
@@ -312,6 +324,7 @@ body footer .copyRight p {
   body main section .hero {
     height: 450px;
     width: 100%;
+    z-index: -1;
   }
   body main section .hero .overlay .phrase p {
     margin-left: 50px;

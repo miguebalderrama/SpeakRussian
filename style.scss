@@ -219,7 +219,6 @@ body {
       .menuPrincipal.is_active {
         //transform: translate3d(0px, 5px, 0px);
         margin: 10px 0 0 0;
-
         background-color: white;
         z-index: 200;
 
@@ -229,10 +228,10 @@ body {
         .menuItems.is_active {
           display: flex;
           flex-direction: column;
-          background-color: white;
           width: 100%;
           z-index: 100;
-
+          transform: translate3d(0px, 0px, 0px);
+          background-color: white;
           .left {
             margin: 0;
           }
@@ -242,12 +241,14 @@ body {
 
           li {
             display: block;
-            z-index: 100;
+            z-index: 1000;
             background-color: white;
 
             a {
               line-height: 52px;
               padding-left: 10px;
+              background-color: white;
+              z-index: 1000;
             }
           }
         }
@@ -270,9 +271,12 @@ body {
           margin-right: 10px;
         }
         .menuItems {
+          background-color: white;
+          transform: translate3d(0px, -130%, 0px);
+          transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
           li {
             display: block;
-            display: none;
+           // display: none;
           }
           .rigth {
             float: none;
@@ -285,10 +289,13 @@ body {
     }
 
     main {
+     
       section {
+       
         .hero {
           height: 450px;
           width: 100%;
+          z-index: -1;
           .overlay {
            
             .phrase {
@@ -310,6 +317,7 @@ body {
             height: 100%;
             width: auto;
             left: -220px;
+            
           }
         }
       }
