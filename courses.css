@@ -110,9 +110,16 @@ body main section {
   max-width: 1210px;
   margin: auto;
   margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 body main section .card {
+  margin: 15px;
+  overflow: hidden;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   width: 360px;
@@ -120,15 +127,26 @@ body main section .card {
   -webkit-transition: 0.4s cubic-bezier(0.05, 1.04, 0.72, 0.98);
   transition: 0.4s cubic-bezier(0.05, 1.04, 0.72, 0.98);
   border-radius: 1%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  color: #515151;
 }
 
 body main section .card img {
   width: 100%;
+  -webkit-transition: 0.4s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  transition: 0.4s cubic-bezier(0.05, 1.04, 0.72, 0.98);
 }
 
 body main section .card:hover {
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+body main section .card:hover img {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 body footer {
