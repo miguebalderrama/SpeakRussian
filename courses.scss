@@ -63,7 +63,7 @@ body {
 
       .logo {
         display: inline-block;
-        img {
+        .loguito {
           width: 62px;
           margin-right: 10px;
         }
@@ -95,83 +95,27 @@ body {
       }
     }
   }
-
-  main {
-    section {
-      .hero {
-        position: relative;
-        overflow: hidden;
-        display: block;
-        //background-color: #3433cd;
-        max-width: 1210px;
-        height: 640px;
-        margin: auto;
-        z-index: 1;
-        .overlay {
-          display: flex;
-          box-sizing: border-box;
-          position: absolute;
-          bottom: 0;
-          background: rgba(51, 51, 204, 0.4); /* Black see-through */
-          height: 100%;
-          width: 100%;
-          transition: 0.5s ease;
-          opacity: 1;
-          align-items: center;
-          z-index: 1;
-
-          .phrase {
-            p {
-              margin-left: 100px;
-              color: white;
-              font-family: "Open Sans", sans-serif;
-              line-height: 50px;
-              font-size: 50px;
-              font-weight: 400;
-              letter-spacing: 0;
-              span {
-                font-weight: 700;
-              }
-            }
-            .button {
-              margin-top: 50px;
-              margin-left: 100px;
-              padding-top: 8px;
-              display: block;
-              width: 240px;
-              height: 54px;
-              border: solid 4px white;
-              text-align: center;
-              transition: 0.2s;
-              a {
-                text-decoration: none;
-                color: white;
-                font-family: "Open Sans", sans-serif;
-                font-weight: 700;
-                font-size: 30px;
-              }
-            }
-            .button:hover {
-              background-color: white;
-              cursor: pointer;
-
-              a {
-                color: rgb(78, 76, 76);
-              }
-            }
-          }
-        }
-        video {
-          position: absolute;
-          width: 100%;
-          z-index: 1;
-          // height: 100%;
-
-          filter: grayscale(0.5);
-        }
+  main{
+    section{
+      max-width: 1210px;
+      margin: auto;
+      margin-top: 100px;
+      .card{
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        width: 360px;
+         height: 450px;
+         transition: 0.4s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+         border-radius: 1%;
+         img{
+           width: 100%;
+         }
       }
+       .card:hover{
+         
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+       }
     }
-  }
+  }  
   footer {
     margin: auto;
     display: flex;
@@ -256,7 +200,7 @@ body {
       .menuPrincipal {
         margin: 10 10 10 15;
         .logo {
-          img {
+          .loguito {
             width: 52px;
             margin-top: 5px;
           }
@@ -286,36 +230,7 @@ body {
       }
     }
 
-    main {
-      section {
-        .hero {
-          height: 450px;
-          width: 100%;
-          z-index: -1;
-          .overlay {
-            .phrase {
-              p {
-                margin-left: 50px;
-                font-size: 25px;
-              }
-              .button {
-                margin-left: 50px;
-                width: 200px;
-                height: 44px;
-                a {
-                  font-size: 25px;
-                }
-              }
-            }
-          }
-          video {
-            height: 100%;
-            width: auto;
-            left: -220px;
-          }
-        }
-      }
-    }
+    
   }
   footer {
     .menuFooter {
